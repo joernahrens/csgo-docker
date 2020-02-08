@@ -3,11 +3,7 @@ FROM centos:latest
 RUN mkdir -p /opt/steam /opt/steamhome
 
 # Setup
-RUN echo "Installing Packages ..." &&\
-	# Install
-	yum update -y &&\
-	yum install -y curl &&\
-	yum install -y glibc.i686 libstdc++.i686
+RUN yum update -y && yum install -y curl net-tools glibc.i686 libstdc++.i686
 
 # Download and extract SteamCMD
 RUN cd /opt/steam &&\
