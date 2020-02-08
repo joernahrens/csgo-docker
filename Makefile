@@ -8,7 +8,7 @@ update: build
 	docker run -it \
           -p 27015:27015/tcp \
           -p 27015:27015/udp \
-          --privileged -v `pwd`:/opt/steam \
+          --privileged -v `pwd`:/opt/steamhome \
           joernahrens/csgo-docker \
           ./update.sh
 
@@ -16,7 +16,7 @@ lan: build
 	docker run -it \
           -p 27015:27015/tcp \
           -p 27015:27015/udp \
-          --privileged -v `pwd`:/opt/steam \
+          --privileged -v `pwd`:/opt/steamhome \
           joernahrens/csgo-docker \
           ./run.sh
 
@@ -24,6 +24,5 @@ run: build
 	docker run -it \
           -p 27015:27015/tcp \
           -p 27015:27015/udp \
-          --privileged -v `pwd`:/opt/steam \
-          joernahrens/csgo-docker \
-          /bin/sh
+          --privileged -v `pwd`:/opt/steamhome \
+          joernahrens/csgo-docker

@@ -1,6 +1,6 @@
 FROM centos:latest
 
-RUN mkdir -p /opt/steam
+RUN mkdir -p /opt/steam /opt/steamhome
 
 # Setup
 RUN echo "Installing Packages ..." &&\
@@ -17,11 +17,10 @@ RUN cd /opt/steam &&\
 # Update SteamCMD
 RUN /opt/steam/steamcmd.sh +quit
 
-WORKDIR /opt/steam
-VOLUME /opt/steam/
-ENV HOME /opt/steam
+VOLUME /opt/steamhome
+WORKDIR /opt/steamhome
 
 EXPOSE 27015/tcp
 EXPOSE 27015/udp
 
-ENTRYPOINT ["./run.sh"]
+ENTRYPOINT ["/bin/sh"]
