@@ -5,6 +5,12 @@
 - Docker
 - Make
 
+## Configure
+
+Generate a token for game 730 (CS:GO): https://steamcommunity.com/dev/managegameservers
+
+Create the file `.env` and set `STEAMACCOUNT=$THETOKEN`.
+
 ## Commands
 
 `$ make update`

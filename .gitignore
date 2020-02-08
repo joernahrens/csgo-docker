@@ -5,3 +5,4 @@ Steam/
 .bash_history
 /.steampath
 /.steampid
+.env

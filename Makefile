@@ -16,6 +16,7 @@ lan: build
 	docker run -it \
           -p 27015:27015/tcp \
           -p 27015:27015/udp \
+          --env-file=.env \
           --privileged -v `pwd`:/opt/steamhome \
           joernahrens/csgo-docker \
           ./run.sh
@@ -24,5 +25,6 @@ run: build
 	docker run -it \
           -p 27015:27015/tcp \
           -p 27015:27015/udp \
+          --env-file=.env \
           --privileged -v `pwd`:/opt/steamhome \
           joernahrens/csgo-docker
