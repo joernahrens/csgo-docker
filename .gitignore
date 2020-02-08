@@ -2,3 +2,6 @@
 games/
 Steam/
 .steam
+.bash_history
+/.steampath
+/.steampid
